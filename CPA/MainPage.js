@@ -6,6 +6,8 @@ import { StyleSheet, Text, View, Button, Image, TextInput } from 'react-native';
 
 import Games from './Games'
 
+import DoMath from "./DoMath"
+
 
 
 const Stack = createNativeStackNavigator();
@@ -26,6 +28,8 @@ const MyStack = () => {
         <Stack.Screen name="SetTime" component={SetTimeScreen} />
 
         <Stack.Screen name="Games" component={Games} />
+
+        <Stack.Screen name="DoMath" component={DoMath} />
 
       </Stack.Navigator>
     </NavigationContainer>
@@ -58,9 +62,9 @@ const HomeScreen = ({ navigation }) => {
 
           <Button
             color= "black"
-            title="Choose The Game To Stop The Alarm!"
+            title="calculate the number To Stop The Alarm!"
             onPress={() =>
-              navigation.navigate('Games')
+              navigation.navigate('DoMath')
             }
           />
         </View>
