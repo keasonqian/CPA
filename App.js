@@ -1,4 +1,5 @@
 import React from 'react';
+/*
 import {View} from 'react-native';
 import NavDemo1 from './components/NavDemo1.js'
 //import Quiz1 from './components/Quiz1.js'
@@ -10,10 +11,22 @@ import TipCalculator from './components/TipCalculator.js'
 //import ListDemoScreen from './components/ListDemoScreen.js'
 import CovidDemo from './components/CovidDemo.js'
 import ShowPage from'./components/ShowPage.js'
-import MainPage from "./CPA/MainPage.js"
+
 import WebViewer from'./components/WebViewer.js'
 import Profile from'./components/Profile.js'
 import Pomorodoros from'./components/Pomodoros.js'
+import CameraDemo from'./components/CameraDemo'
+import ImagePicker from'./components/ImagePicker'
+
+import MathQuiz from'./quiz/MathQuiz';
+import DoMath from "./CPA/DoMath"
+import PointDemo from'./components/PointDemo'
+
+*/
+
+
+import MainPage from "./CPA/MainPage.js"
+
 
 // const App = () => {...}
 export default function App() {
