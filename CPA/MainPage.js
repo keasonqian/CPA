@@ -67,6 +67,15 @@ const HomeScreen = ({ navigation }) => {
               navigation.navigate('DoMath')
             }
           />
+
+          <Button
+            color= "black"
+            title="Choose the game you want to play!"
+            onPress={() =>
+              navigation.navigate('Games')
+            }
+          />
+
         </View>
         <View style={styles.horizontal}>
           <Image
