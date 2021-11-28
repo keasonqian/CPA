@@ -24,9 +24,15 @@ import PointDemo from'./components/PointDemo'
 
 */
 
+import Pomorodoros from'./components/Pomodoros.js'
 
 import MainPage from "./CPA/MainPage.js"
 
+import Note from "./CPA/Note.js";
+
+import BBBoard from'./CPA/BBBoard.js';
+
+import GitHub from'./CPA/GitHub.js'
 
 // const App = () => {...}
 export default function App() {

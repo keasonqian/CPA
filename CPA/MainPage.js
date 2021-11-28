@@ -8,6 +8,9 @@ import Games from './Games'
 
 import DoMath from "./DoMath"
 
+import Note from "./Note"
+
+import GitHub from "./GitHub"
 
 
 const Stack = createNativeStackNavigator();
@@ -18,16 +21,16 @@ const MyStack = () => {
       <Stack.Navigator>
 
         <Stack.Screen
-          name="Clock time!"
+          name="Record Everything!"
           component={HomeScreen}
           //options={{ title: 'Welcome' }}
         />
 
         <Stack.Screen name="CurrentTime" component={CurrentTimeScreen} />
 
-        <Stack.Screen name="SetTime" component={SetTimeScreen} />
+        <Stack.Screen name="Notes" component={Note} />
 
-        <Stack.Screen name="Games" component={Games} />
+        <Stack.Screen name="GitHub" component={GitHub} />
 
         <Stack.Screen name="DoMath" component={DoMath} />
 
@@ -40,8 +43,8 @@ const MyStack = () => {
 const HomeScreen = ({ navigation }) => {
   return (
       <View style={styles.container}>
-        <View style={{flex:5,flexDirection:"row",
-                      alignItems:"center",justifyContent: 'space-around',}}>
+        <View style={{flexDirection:"column",
+                      alignItems:"center",justifyContent: 'space-between',}}>
           <Button
             color= "black"
             title="Check Current Time!"
@@ -53,16 +56,16 @@ const HomeScreen = ({ navigation }) => {
 
           <Button
             color= "black"
-            title="Set Your Alarm!"
+            title="Make Plan!"
             onPress={() =>
-              navigation.navigate('SetTime')
+              navigation.navigate('Notes')
                  // we're passing a parameter name:'Jane' to the Profile component!
             }
           />
 
           <Button
             color= "black"
-            title="calculate the number To Stop The Alarm!"
+            title="Do some Math"
             onPress={() =>
               navigation.navigate('DoMath')
             }
@@ -70,16 +73,16 @@ const HomeScreen = ({ navigation }) => {
 
           <Button
             color= "black"
-            title="Choose the game you want to play!"
+            title="Check your GitHub"
             onPress={() =>
-              navigation.navigate('Games')
+              navigation.navigate('GitHub')
             }
           />
 
         </View>
         <View style={styles.horizontal}>
           <Image
-             style={{width:"50%",height:"100%"}}
+             style={{width:"100%",height:"70%"}}
              source={{uri:'https://ae01.alicdn.com/kf/H16575818d272401d8f0db9dd80e645bfM.jpg'}}/>
         </View>
     </View>
@@ -93,12 +96,21 @@ const HomeScreen = ({ navigation }) => {
 // ProfileScreen function is called with a JSON object
 //  {navigation:..., route:...,  otherstuff}
 const CurrentTimeScreen = ({ navigation, route }) => {
+  var today = new Date();
+  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+  var dateTime = date+' '+time;
   return (
     <View style={styles.timePageWord}>
         <Text style={{color: 'white',
                       fontWeight: 'bold',
-                      fontSize: 50,}}>
-                Current Time: 13 : 30 : 00
+                      fontSize: 30,}}>
+                {date}
+        </Text>
+        <Text style={{color: 'white',
+                      fontWeight: 'bold',
+                      fontSize: 30,}}>
+                {time}
         </Text>
     </View>
   )

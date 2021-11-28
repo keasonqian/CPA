@@ -225,23 +225,23 @@ const DoMath = (props) => {
       padding:"20px",
     },
     textinput:{
-      margin:30,
-      fontSize:50,
+      margin:5,
+      fontSize:10,
       border:"thick solid red",
       color:"white",
     },
     correctview: {
-      fontSize:25,
+      fontSize:10,
       color:'white',
 
     },
     header: {
-      fontSize:60,
+      fontSize:23,
       color:'blue',
-      margin:30,
+      margin:5,
     },
     second_header: {
-      fontSize:50,
+      fontSize:20,
       color:'white'
     },
     nextQuestion: {
@@ -259,7 +259,7 @@ const DoMath = (props) => {
       padding:"20px",
     },
     dataStyle: {
-      fontSize:30,
+      fontSize:10,
       color:'white'
     },
 
